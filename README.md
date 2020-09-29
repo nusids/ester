@@ -1,10 +1,10 @@
 ## ESTeR: Emotion-Sensitive TextRank
 
-The repo contains implementations, datasets, and other resources used for a our paper: 
+The repo contains implementations, datasets, and other resources used for our paper: 
 
 *ESTeR: Combining Word Co-occurrences and Word Associations for Unsupervised Emotion Detection. Sujatha Das Gollapalli, Polina Rozenshtein, See-Kiong Ng. Findings of EMNLP 2020.*
 
-The datasets and resources, which are not freely available, are excuded.
+The datasets and resources, which are not freely available for academic use, are excuded.
 
 = Python 3.6 =
 

@@ -1,5 +1,10 @@
-## emnlp20-anonymous-submission
-Temporary repo, contains implementations, datasets, and other resources used for a EMNLP20 anonymous submission. Excludes datasets and resources, which are not freely available.
+## ESTeR: Emotion-Sensitive TextRank
+
+The repo contains implementations, datasets, and other resources used for a our paper: 
+
+*ESTeR: Combining Word Co-occurrences and Word Associations for Unsupervised Emotion Detection. Sujatha Das Gollapalli, Polina Rozenshtein, See-Kiong Ng. Findings of EMNLP 2020.*
+
+The datasets and resources, which are not freely available, are excuded.
 
 = Python 3.6 =
 

@@ -112,10 +112,10 @@ if __name__ == "__main__":
     print('{:15} {:10.4}'.format('recall@2', R))
 
     if args.output:
-        script_outdir = output
+        script_outdir = outdir
         if not os.path.exists(script_outdir):
             os.makedirs(script_outdir)
-        dfpred.to_csv(os.path.join(script_outdir, args.output + '_predictions.pkl'), index = False, sep = '\t') 
+        dfpred.to_csv(os.path.join(script_outdir, args.output + '_predictions.csv'), index = False, sep = '\t') 
     
     
 

@@ -82,7 +82,7 @@ if __name__ == "__main__":
 	C, lexicon, loc_emotions = load.get_lexicon(use_vocab_df, use_emotions, name = 'NRC-EmoLex')
 
 	res = algs.ester(S, C, M)
-	pickle.dump(res, open('casestudy_pagerank.pkl', "wb"))
+	#pickle.dump(res, open('casestudy_pagerank.pkl', "wb"))
 	#res = pickle.load(open('casestudy_pagerank.pkl', "rb"))
 	
 	dfpred = pd.DataFrame(res, columns = loc_emotions)

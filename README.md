@@ -8,6 +8,7 @@ The datasets and resources, which are not freely available for academic use, are
 
 = Python 3.6 =
 
+* the repo uses Git LFS, ensure it is installed for complete cloning
 * list of dependencies `requirements.txt`
 * installation: `pip3 install -r requirements.txt`
 * for optimal running time ensure that BLAS/LAPACK is installed and used in NumPy and SciPy

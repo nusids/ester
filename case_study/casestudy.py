@@ -81,12 +81,10 @@ if __name__ == "__main__":
 	S, df = read_case_study(reverse_use_vocab)
 	C, lexicon, loc_emotions = load.get_lexicon(use_vocab_df, use_emotions, name = 'NRC-EmoLex')
 
-	#res = algs.ester(S, C, M)
+	res = algs.ester(S, C, M)
 	#pickle.dump(res, open('casestudy_pagerank.pkl', "wb"))
-	res = pickle.load(open('casestudy_pagerank.pkl', "rb"))
-	res = res[:,0:-1]
-	print(res.shape)
-
+	#res = pickle.load(open('casestudy_pagerank.pkl', "rb"))
+	
 	dfpred = pd.DataFrame(res, columns = loc_emotions)
 	dfpred[['id', 'text', 'tokenized', 'hashtags']] = df[['id', 'text', 'tokenized', 'hashtags']].copy()
 

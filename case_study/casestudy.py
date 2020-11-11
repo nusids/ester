@@ -82,17 +82,18 @@ if __name__ == "__main__":
 	C, lexicon, loc_emotions = load.get_lexicon(use_vocab_df, use_emotions, name = 'NRC-EmoLex')
 
 	res = algs.ester(S, C, M)
-	#pickle.dump(res, open('casestudy_pagerank.pkl', "wb"))
+	pickle.dump(res, open('casestudy_pagerank.pkl', "wb"))
 	#res = pickle.load(open('casestudy_pagerank.pkl', "rb"))
 	
 	dfpred = pd.DataFrame(res, columns = loc_emotions)
 	dfpred[['id', 'text', 'tokenized', 'hashtags']] = df[['id', 'text', 'tokenized', 'hashtags']].copy()
-
+	
 	k=2
 	threshold = np.sort(dfpred[loc_emotions].values, axis = 1)[:,-k]
 	binary_pred = dfpred[loc_emotions].ge(threshold, axis='rows').astype(int)
 	binary_pred[binary_pred.sum(axis = 1) == len(use_emotions)] = 0
 	dfpred[loc_emotions] = binary_pred*dfpred[loc_emotions]
+	dfpred.to_csv(os.path.join('casestudy_predictions.csv'), columns=list(dfpred)[:-2], index = False, sep = '\t') 
 	draw_heatmap(dfpred)
 
 
